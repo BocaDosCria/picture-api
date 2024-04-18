@@ -23,14 +23,14 @@ model User {
   @@map("users")
 }
 
-model Movies {
+model Pictures {
   id         String   @id @default(uuid())
   title      String
   summary    String?
-  ratting    Float    @default(0)
+  rating     Float    @default(0)
   url        String
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt()
 
-  @@map("movies")
+  @@map("pictures")
 }
