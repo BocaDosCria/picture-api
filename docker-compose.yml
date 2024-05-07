@@ -1,5 +1,5 @@
 services:
-  node-api-template-pg:
+  picture-api-pg:
     image: bitnami/postgresql
     expose:
       - "5432"
@@ -15,10 +15,10 @@ services:
       dockerfile: Dockerfile
       target: base
     depends_on:
-      - node-api-template-pg
-    container_name: node-api
+      - picture-api-pg
+    container_name: picture-api
     environment:
-      - DATABASE_URL=postgresql://docker:docker@node-api-template-pg:5432/nodeapi?schema=public
+      - DATABASE_URL=postgresql://docker:docker@picture-api-pg:5432/picture-api?schema=public
     expose:
       - "3333"
     ports:
